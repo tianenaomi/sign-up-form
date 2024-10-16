@@ -8,44 +8,58 @@
 </head>
 <body>
     <div id="leftPanel">
-        <div>
-            <div id="container">
-                <img src="/resources/images/catLogo.png" height="40px" width="40px">
-                <h1 id="logo">&lt; RUPURRT &gt;</h1>
-            </div>
+        <div id="leftCtnr">
+            <span>N</span>
+            <h1 id="logo">RUPURRT&gt;</h1>
         </div>
     </div>
 
-    <div id="rightPanel">
+    <form id="rightPanel" action="" method="">
         <div id="topPanel">
-            <p>This is not a real online service, though Rupurrt certainly <em>wishes</em> it was. If this were real, you could sign up below for your chance to win kitty cuddles. Only the <em>luckiest</em> get chosen!</p>
+            <p>This is not a real fan club, though Rupurrt certainly <em>wishes</em> it was. If this were real, you could sign up below for your chance to win kitty cuddles. Only the <em>luckiest</em> get chosen!</p>
             <p>Sign up meow!</p>
         </div>
 
         <div id="midPanel">
             <p>Let's do this!</p>
-            <div>
-                <label for="name">FIRST NAME</label>
-                <input type="text" id="name" name="name">
+            <div id="midCtnr">
+                <p class="card">
+                    <label for="name">FIRST NAME *</label>
+                    <input type="text" id="name" name="name" pattern="^[a-zA-Z]+(([\-'][a-zA-Z]+)?){0,2}$" required><span></span>
+                </p>
 
-                <label for="surname">LAST NAME</label>
-                <input type="text" id="surname" name="surname">
+                <p class="card">
+                    <label for="surname">LAST NAME *</label>
+                    <input type="text" id="surname" name="surname" pattern="^[a-zA-Z]+(([\-'][a-zA-Z]+)?){0,2}$" required><span></span>
+                </p>
 
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email">
+                <p class="card">
+                    <label for="email">EMAIL *</label>
+                    <input type="email" id="email" name="email" pattern="^\w+([\- .]?\w+)+@[a-z]+([\-]\w+)?\.[a-z]{2,3}(.[a-z]{2,3})?(.[a-z]{2,3})?$" required><span></span>
+                </p>
 
-                <label for="phone">PHONE NUMBER</label>
-                <input type="tel" id="phone" name="phone">
+                <p class="card">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phone" pattern="(\+614|\+61 4|614|04)(\d{2})?( )?(\d{3})?( )?(\d{3})?"><span></span>
+                </p>
 
-                <label for="password">PASSWORD</label>
-                <input type="text" id="password" name="password">
+                <p class="card">
+                    <label for="password">PASSWORD *</label>
+                    <input type="password" id="password" name="password" pattern="^.[^\s]{6,20}$" required><span></span>
+                </p>
+
+                <p class="card">
+                    <label for="confirm">CONFIRM PASSWORD *</label>
+                    <input type="password" id="confirm" name="confirm" pattern="^.[^\s]{6,20}$" required><span></span>
+                </p>
             </div>
+
         </div>
         <div id="btmPanel">
-            <button type="button">Enter me</button>
-            <p>Already in the draw? <a href="">Log in to check if you're chosen</a></p>
+            <button type="submit">Sign me up</button>
+            <p>Already in the club? <a href="">Log in</a></p>
         </div>
-    </div>
+    </form>
 </body>
 <script src="resources/script.js"></script>
 </html>
